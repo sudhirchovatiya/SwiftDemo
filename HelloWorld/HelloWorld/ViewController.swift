@@ -14,6 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let lblHello: UILabel? = self.view.viewWithTag(1) as? UILabel
+        lblHello?.text = "  \n  Hello, world  \n"
+        
+        UIView.animate(withDuration: 0.5) { 
+            lblHello?.backgroundColor = UIColor.red
+            lblHello?.layer.borderColor = UIColor.blue.cgColor;
+            lblHello?.layer.borderWidth = 1.0
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
