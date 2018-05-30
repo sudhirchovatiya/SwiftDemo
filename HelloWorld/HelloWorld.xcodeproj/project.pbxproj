@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD19761D20BECC850072B976 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD19761C20BECC850072B976 /* CloudKit.framework */; };
 		BD76F5061F4D5FE40002D228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD76F5051F4D5FE40002D228 /* AppDelegate.swift */; };
 		BD76F5081F4D5FE40002D228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD76F5071F4D5FE40002D228 /* ViewController.swift */; };
 		BD76F50B1F4D5FE40002D228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD76F5091F4D5FE40002D228 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD19761A20BECC7E0072B976 /* HelloWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloWorld.entitlements; sourceTree = "<group>"; };
+		BD19761C20BECC850072B976 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BD76F5021F4D5FE40002D228 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD76F5051F4D5FE40002D228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD76F5071F4D5FE40002D228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +32,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD19761D20BECC850072B976 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD19761B20BECC850072B976 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD19761C20BECC850072B976 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD76F4F91F4D5FE40002D228 = {
 			isa = PBXGroup;
 			children = (
 				BD76F5041F4D5FE40002D228 /* HelloWorld */,
 				BD76F5031F4D5FE40002D228 /* Products */,
+				BD19761B20BECC850072B976 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,7 @@
 		BD76F5041F4D5FE40002D228 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				BD19761A20BECC7E0072B976 /* HelloWorld.entitlements */,
 				BD76F5051F4D5FE40002D228 /* AppDelegate.swift */,
 				BD76F5071F4D5FE40002D228 /* ViewController.swift */,
 				BD76F5091F4D5FE40002D228 /* Main.storyboard */,
@@ -98,6 +112,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = QNMJT9VVN8;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -263,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HelloWorld/HelloWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nish Parikh (53JE8TY6J8)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QNMJT9VVN8;
@@ -280,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HelloWorld/HelloWorld.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Nish Parikh (53JE8TY6J8)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QNMJT9VVN8;
